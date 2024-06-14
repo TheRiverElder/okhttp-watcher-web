@@ -1,0 +1,11 @@
+.ByteArrayView {
+    overflow-x: auto;
+    >.data {
+        font-family: "Consolas";
+        color: gray;
+
+        >pre {
+            margin: 0;
+        }
+    }
+}

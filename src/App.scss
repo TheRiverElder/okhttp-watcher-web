@@ -1,0 +1,119 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+
+  >.connection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    >label {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      >input {
+        flex: 1;
+        padding: 0.5em;
+      }
+    }
+
+    >div.buttons {
+      display: flex;
+      flex-direction: row;
+
+      >* {
+        padding: 0.5em;
+        margin-left: 1em;
+      }
+    }
+  }
+
+  >.connection-states {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    margin-top: 1em;
+    border-radius: 0.2em;
+    border: solid grey 0.05em;
+
+    >.list {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      >.info {
+        padding: 1em;
+      }
+
+      >ul {
+        flex: 1;
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        >li {
+          max-lines: 1;
+          max-width: 100%;
+          overflow: hidden;
+          cursor: pointer;
+          padding: 0.2em 1em;
+          color: gray;
+          font-family: "Consolas";
+          font-size: 0.8em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0;
+
+          &:hover {
+            background-color: #efefef;
+          }
+        }
+      }
+    }
+
+    >.detail {
+      flex: 1;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 1em;
+      border-left: solid grey 0.05em;
+
+      >details {
+        border: solid #efefef 0.05em;
+
+        >summary {
+          padding: 0.2em 0.5em;
+          background-color: #efefef;
+          cursor: pointer;
+        }
+
+        >:not(summary) {
+          padding: 0.5em;
+          overflow: hidden;
+          word-wrap: break-word;
+          word-break: break-all;
+          font-family: "Consolas";
+        }
+      }
+    }
+  }
+}
